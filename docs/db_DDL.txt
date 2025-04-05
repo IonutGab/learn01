@@ -1,0 +1,19 @@
+create table car
+(
+	car_id varchar(32) not null
+		primary key,
+	name varchar(255) not null,
+	car_year int null
+);
+
+create table repair
+(
+	repair_id varchar(32) not null
+		primary key,
+	car_id varchar(32) null,
+	repair_date datetime null,
+	comments varchar(255) null,
+	constraint fk_repair_car
+		foreign key (car_id) references car (car_id)
+);
+
