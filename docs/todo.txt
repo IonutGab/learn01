@@ -1,0 +1,17 @@
+- GET /cars/{carId}
+
+- create new value object that inherits from Car and contains  a list called repairs. Let's call it AllCarData. The repair value object we call it Repair
+- write the code to load the car from database
+- this time from one shot you load as well the repairs associated with it
+- Repair value object will not have carId field: if it is in the list associated with a car, then it belongs to that car
+
+
+- POST /car
+- you post a value object similar with the one at the endpoint above, this time in request payload
+- you define a parameter in the endpoint method that is marked @RequestBody and is of type AllCarData, and if all good, the json parsing will be done automatically and data loaded in that value object
+- check all the fields are populated correctly, if not throw error
+- check carId does not exist in the database, if it does exist, throw error - POST is supposed to be only to insert new
+- when all good, insert all in database, first the car, then the associated repairs.
+- look at what @ControllerAdvice does; for now nothing to do.
+
+That's all for now;
