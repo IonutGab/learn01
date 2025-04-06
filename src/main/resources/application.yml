@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: demo1
+
+
+db:
+  config:
+    url: jdbc:mariadb://localhost:3306/shop
+    username: shop
+    password: shop
+
